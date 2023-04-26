@@ -25,3 +25,6 @@ D:\Module Quiz Gen\QuizGen\ToDoList\obj\Debug\net5.0-windows\ToDoList.dll
 D:\Module Quiz Gen\QuizGen\ToDoList\obj\Debug\net5.0-windows\ref\ToDoList.dll
 D:\Module Quiz Gen\QuizGen\ToDoList\obj\Debug\net5.0-windows\ToDoList.pdb
 D:\Module Quiz Gen\QuizGen\ToDoList\obj\Debug\net5.0-windows\ToDoList.genruntimeconfig.cache
+D:\Module Quiz Gen\QuizGen\ToDoList\bin\Debug\net5.0-windows\ToDoList.Core.dll
+D:\Module Quiz Gen\QuizGen\ToDoList\bin\Debug\net5.0-windows\ToDoList.Core.pdb
+D:\Module Quiz Gen\QuizGen\ToDoList\obj\Debug\net5.0-windows\ToDoList.csproj.CopyComplete

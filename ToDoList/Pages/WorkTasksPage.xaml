@@ -8,25 +8,27 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="WorkTasksPage">
 
-    <Grid>
+    <Grid Height="400">
         
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="WORK TASKS PAGE" />
 
-            <StackPanel Margin="10">
-                <local:WorkTask />
-                <local:WorkTask />
-                <local:WorkTask />
-                <local:WorkTask />
-                <local:WorkTask />
-            </StackPanel>
-          
+            <ScrollViewer Height="300">
+                <ItemsControl ItemsSource="{Binding WorkTaskList}" Margin="10">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <local:WorkTask/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
             <TextBlock Text="Tytuł zadania: "/>
-            <TextBox />
+            <TextBox Text="{Binding NewWorkTaskTitle, Mode=TwoWay}"/>
             <TextBlock Text="Opis zadania: "/>
-            <TextBox />
+            <TextBox  Text="{Binding NewWorkTaskDescription, Mode=TwoWay}"/>
             <StackPanel Orientation="Horizontal">
-                <Button Content="Dodaj"></Button>
+                <Button Command="{Binding AddNewTaskCommand}" Content="Dodaj"></Button>
                 <Button Content="Usuń"></Button>
             </StackPanel>
         </StackPanel>

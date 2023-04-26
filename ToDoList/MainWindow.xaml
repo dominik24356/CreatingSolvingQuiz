@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDoList"
         mc:Ignorable="d"
+        MinHeight="400"
+        MinWidth="600"
         Title="MainWindow" Height="450" Width="800">
     
     <local:WorkTasksPage />

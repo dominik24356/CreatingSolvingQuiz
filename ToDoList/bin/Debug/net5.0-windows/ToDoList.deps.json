@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "ToDoList/1.0.0": {
+        "dependencies": {
+          "ToDoList.Core": "1.0.0"
+        },
         "runtime": {
           "ToDoList.dll": {}
+        }
+      },
+      "ToDoList.Core/1.0.0": {
+        "runtime": {
+          "ToDoList.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ToDoList/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ToDoList.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
