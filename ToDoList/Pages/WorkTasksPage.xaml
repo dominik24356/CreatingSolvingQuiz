@@ -29,7 +29,7 @@
             <TextBox  Text="{Binding NewWorkTaskDescription, Mode=TwoWay}"/>
             <StackPanel Orientation="Horizontal">
                 <Button Command="{Binding AddNewTaskCommand}" Content="Dodaj"></Button>
-                <Button Content="Usuń"></Button>
+                <Button Command ="{Binding DeleteSelectedTasksCommand}" Content="Usuń"></Button>
             </StackPanel>
         </StackPanel>
                 

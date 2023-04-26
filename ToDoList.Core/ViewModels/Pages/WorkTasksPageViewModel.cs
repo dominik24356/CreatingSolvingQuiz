@@ -23,9 +23,12 @@ namespace ToDoList.Core.ViewModels.Pages
 
         public ICommand AddNewTaskCommand { get; set; }
 
+        public ICommand DeleteSelectedTasksCommand { get; set; }
+
         public WorkTasksPageViewModel()
         {
             AddNewTaskCommand = new RelayCommand(AddNewTask);
+            DeleteSelectedTasksCommand = new RelayCommand(DeleteSelectedTasks);
         }
 
         private void AddNewTask()
@@ -44,9 +47,20 @@ namespace ToDoList.Core.ViewModels.Pages
             OnPropertyChanged(nameof(NewWorkTaskTitle)); // to jest m.in odpowiedzialne za to zeby dzialaly referencje w dwie strony (Mode = "TwoWay")
             OnPropertyChanged(nameof(NewWorkTaskDescription));
 
-
         }
 
+
+        private void DeleteSelectedTasks()
+        {
+
+            var selectedTasks = WorkTaskList.Where(x => x.IsSelected).ToList();
+
+            foreach (var task in selectedTasks)
+            {
+                WorkTaskList.Remove(task);
+            }
+
+        }
 
     }
 }
