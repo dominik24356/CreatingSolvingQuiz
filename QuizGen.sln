@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizGen", "QuizGen\QuizGen.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizGen.Database", "QuizGen.Database\QuizGen.Database.csproj", "{E93DA852-2FD0-4B06-AD14-8EA1E1B8C061}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList", "ToDoList\ToDoList.csproj", "{09E7F424-99D3-45A5-8329-A5B7E2AF0FD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList", "ToDoList\ToDoList.csproj", "{09E7F424-99D3-45A5-8329-A5B7E2AF0FD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Core", "ToDoList.Core\ToDoList.Core.csproj", "{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.Core", "ToDoList.Core\ToDoList.Core.csproj", "{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Database", "ToDoList.Database\ToDoList.Database.csproj", "{62E9105C-8B9E-4D05-80AD-F9728C91D33D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E9105C-8B9E-4D05-80AD-F9728C91D33D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E9105C-8B9E-4D05-80AD-F9728C91D33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E9105C-8B9E-4D05-80AD-F9728C91D33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E9105C-8B9E-4D05-80AD-F9728C91D33D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

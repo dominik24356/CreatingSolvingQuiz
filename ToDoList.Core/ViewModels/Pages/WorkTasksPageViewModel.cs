@@ -9,6 +9,7 @@ using System.Windows.Input;
 using ToDoList.Core.Helpers;
 using ToDoList.Core.ViewModels.Base;
 using ToDoList.Core.ViewModels.Controls;
+using ToDoList.Database.Entities;
 
 namespace ToDoList.Core.ViewModels.Pages
 {
@@ -29,6 +30,17 @@ namespace ToDoList.Core.ViewModels.Pages
         {
             AddNewTaskCommand = new RelayCommand(AddNewTask);
             DeleteSelectedTasksCommand = new RelayCommand(DeleteSelectedTasks);
+
+            foreach (var task in DatabaseLocator.Database.WorkTasks.ToList())
+            {
+                WorkTaskList.Add(new WorkTaskViewModel // mapowanie, mozna by to wrzcic gdzies do innej klasy
+                {
+                    Title = task.Title,
+                    Description = task.Description,
+                    CreatedDate = task.CreatedDate
+                });
+            }
+
         }
 
         private void AddNewTask()
@@ -40,6 +52,16 @@ namespace ToDoList.Core.ViewModels.Pages
                 CreatedDate = DateTime.Now
             };
             WorkTaskList.Add(newTask);
+
+            DatabaseLocator.Database.WorkTasks.Add(new WorkTask
+            {
+              Id = newTask.Id,
+              Title = newTask.Title  ,
+              Description = newTask.Description,
+              CreatedDate = newTask.CreatedDate
+            });
+
+            DatabaseLocator.Database.SaveChanges();
 
             NewWorkTaskTitle = String.Empty;
             NewWorkTaskDescription = String.Empty;
@@ -55,7 +77,16 @@ namespace ToDoList.Core.ViewModels.Pages
             foreach (var task in selectedTasks)
             {
                 WorkTaskList.Remove(task);
+
+                var foundEntity = DatabaseLocator.Database.WorkTasks.FirstOrDefault(x => x.Id == task.Id);
+
+                if(foundEntity != null)
+                {
+                    DatabaseLocator.Database.Remove(foundEntity);
+                }
             }
+
+            DatabaseLocator.Database.SaveChanges();
 
         }
 

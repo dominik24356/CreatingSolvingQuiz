@@ -9,6 +9,7 @@ namespace ToDoList.Core.ViewModels.Controls
 {
     public class WorkTaskViewModel : BaseViewModel
     {
+        public int Id { get; set; }
         public bool IsSelected { get; set; }
 
         public string Title { get; set; }
