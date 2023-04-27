@@ -44,9 +44,6 @@ namespace ToDoList.Core.ViewModels.Pages
             NewWorkTaskTitle = String.Empty;
             NewWorkTaskDescription = String.Empty;
 
-            OnPropertyChanged(nameof(NewWorkTaskTitle)); // to jest m.in odpowiedzialne za to zeby dzialaly referencje w dwie strony (Mode = "TwoWay")
-            OnPropertyChanged(nameof(NewWorkTaskDescription));
-
         }
 
 

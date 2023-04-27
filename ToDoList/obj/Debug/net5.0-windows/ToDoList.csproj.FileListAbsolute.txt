@@ -28,3 +28,6 @@ D:\Module Quiz Gen\QuizGen\ToDoList\obj\Debug\net5.0-windows\ToDoList.genruntime
 D:\Module Quiz Gen\QuizGen\ToDoList\bin\Debug\net5.0-windows\ToDoList.Core.dll
 D:\Module Quiz Gen\QuizGen\ToDoList\bin\Debug\net5.0-windows\ToDoList.Core.pdb
 D:\Module Quiz Gen\QuizGen\ToDoList\obj\Debug\net5.0-windows\ToDoList.csproj.CopyComplete
+D:\Module Quiz Gen\QuizGen\ToDoList\bin\Debug\net5.0-windows\PropertyChanged.dll
+D:\Module Quiz Gen\QuizGen\ToDoList\obj\Debug\net5.0-windows\Styles\Buttons.baml
+D:\Module Quiz Gen\QuizGen\ToDoList\obj\Debug\net5.0-windows\App.baml

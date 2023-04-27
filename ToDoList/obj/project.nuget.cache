@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fmVilQQrzfB386SwuNs/gDCsUIP1g47VK6NRQpeJ8I8a7KT+RZAkY52P8BLS17mdd19OFKxzfJpFuJLhNJ3VIQ==",
+  "dgSpecHash": "/WwTCYN8ArcCfbzNXFIkB8yH1vNDXcmcpESRAA87cpnl/WqWki5H9qC6E4bPjhNsJ3tSKMCSi2UKJ5HMGKu2aw==",
   "success": true,
   "projectFilePath": "D:\\Module Quiz Gen\\QuizGen\\ToDoList\\ToDoList.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jakub\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
+    "C:\\Users\\jakub\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

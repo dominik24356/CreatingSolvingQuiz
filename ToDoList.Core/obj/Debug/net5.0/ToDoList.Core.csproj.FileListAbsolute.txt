@@ -10,3 +10,5 @@ D:\Module Quiz Gen\QuizGen\ToDoList.Core\obj\Debug\net5.0\ToDoList.Core.csproj.C
 D:\Module Quiz Gen\QuizGen\ToDoList.Core\obj\Debug\net5.0\ToDoList.Core.dll
 D:\Module Quiz Gen\QuizGen\ToDoList.Core\obj\Debug\net5.0\ref\ToDoList.Core.dll
 D:\Module Quiz Gen\QuizGen\ToDoList.Core\obj\Debug\net5.0\ToDoList.Core.pdb
+D:\Module Quiz Gen\QuizGen\ToDoList.Core\obj\Debug\net5.0\ToDoList.Core.csproj.Fody.CopyLocal.cache
+D:\Module Quiz Gen\QuizGen\ToDoList.Core\obj\Debug\net5.0\ToDoList.Core.csproj.Fody.RuntimeCopyLocal.cache
