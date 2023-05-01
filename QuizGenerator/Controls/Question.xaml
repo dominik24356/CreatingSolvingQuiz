@@ -10,10 +10,17 @@
         <StackPanel Orientation="Horizontal">
 
             <CheckBox IsChecked="{Binding IsSelected}"/>
-
             <StackPanel>
-                <TextBlock  Text="{Binding QuestionText}"></TextBlock>
-                <TextBlock  Text="{Binding CorrectOption}"></TextBlock>
+                <TextBlock>
+            Treść pytania:
+            <Run Text="{Binding QuestionText}" />
+                </TextBlock>
+
+                <TextBlock>
+    Poprawna odpowiedź:
+    <Run Text="{Binding CorrectOption}" />
+                </TextBlock>
+
             </StackPanel>
 
         </StackPanel>
