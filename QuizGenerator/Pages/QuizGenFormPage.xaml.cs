@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuizGenerator.Pages
+namespace QuizGenerator
 {
     /// <summary>
     /// Interaction logic for QuizGenFormPage.xaml

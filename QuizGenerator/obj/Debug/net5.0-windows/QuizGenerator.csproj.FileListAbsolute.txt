@@ -1,0 +1,15 @@
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.csproj.AssemblyReference.cache
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\Controls\Question.g.cs
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\Controls\Quiz.g.cs
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\Pages\QuizGenFormPage.g.cs
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\App.g.cs
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator_MarkupCompile.cache
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator_MarkupCompile.lref
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\Controls\Question.baml
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\Controls\Quiz.baml
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.dll
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\ref\QuizGenerator.dll
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.pdb
