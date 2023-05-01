@@ -11,6 +11,8 @@ namespace QuizGenerator.Database.Entities
     {
         public int Id { get; set; }
 
+        public string QuestionText { get; set; }
+
         public string OptionA { get; set; }
 
         public string OptionB { get; set; }

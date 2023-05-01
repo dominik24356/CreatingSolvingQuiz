@@ -13,3 +13,17 @@ D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\MainWindow.bam
 D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.dll
 D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\ref\QuizGenerator.dll
 D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.pdb
+D:\Module Quiz Gen\QuizGen\QuizGenerator\bin\Debug\net5.0-windows\QuizGenerator.exe
+D:\Module Quiz Gen\QuizGen\QuizGenerator\bin\Debug\net5.0-windows\QuizGenerator.deps.json
+D:\Module Quiz Gen\QuizGen\QuizGenerator\bin\Debug\net5.0-windows\QuizGenerator.runtimeconfig.json
+D:\Module Quiz Gen\QuizGen\QuizGenerator\bin\Debug\net5.0-windows\QuizGenerator.runtimeconfig.dev.json
+D:\Module Quiz Gen\QuizGen\QuizGenerator\bin\Debug\net5.0-windows\QuizGenerator.dll
+D:\Module Quiz Gen\QuizGen\QuizGenerator\bin\Debug\net5.0-windows\ref\QuizGenerator.dll
+D:\Module Quiz Gen\QuizGen\QuizGenerator\bin\Debug\net5.0-windows\QuizGenerator.pdb
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\Pages\QuizGenFormPage.baml
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.g.resources
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.AssemblyInfoInputs.cache
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.AssemblyInfo.cs
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.csproj.CoreCompileInputs.cache
+D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.genruntimeconfig.cache

@@ -1,0 +1,17 @@
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\bin\Debug\net5.0\QuizGenerator.Core.deps.json
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\bin\Debug\net5.0\QuizGenerator.Core.dll
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\bin\Debug\net5.0\ref\QuizGenerator.Core.dll
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\bin\Debug\net5.0\QuizGenerator.Core.pdb
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\bin\Debug\net5.0\QuizGenerator.Database.dll
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\bin\Debug\net5.0\QuizGenerator.Database.pdb
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.csproj.AssemblyReference.cache
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.AssemblyInfoInputs.cache
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.AssemblyInfo.cs
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.csproj.CoreCompileInputs.cache
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.csproj.Fody.CopyLocal.cache
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.csproj.Fody.RuntimeCopyLocal.cache
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.csproj.CopyComplete
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.dll
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\ref\QuizGenerator.Core.dll
+D:\Module Quiz Gen\QuizGen\QuizGenerator.Core\obj\Debug\net5.0\QuizGenerator.Core.pdb
