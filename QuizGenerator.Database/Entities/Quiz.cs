@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuizGenerator.Database.Entities
 {
-    class Quiz
+    public class Quiz
     {
 
         public int Id { get; set; }

@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuizGenerator.Core.ViewModels.Pages
+namespace QuizGenerator.Database
 {
-    public class QuizGenFormPageViewModel
+    class QuizGeneratorDbContext
     {
-
     }
 }

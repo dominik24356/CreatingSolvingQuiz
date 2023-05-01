@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuizGenerator.Core.ViewModels.Controls
 {
-    class QuestionViewModel
+    public class QuestionViewModel
     {
     }
 }
