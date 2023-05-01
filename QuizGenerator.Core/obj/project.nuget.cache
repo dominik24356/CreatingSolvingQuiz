@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/Pp/5Y3PDd9h9Q4+X2lEwQ3r45C7wX4lRjbGlrARM3OcEtWRR816b1MH2Bwfl0W4V8GWQjHypdChNb7XOgTjyw==",
+  "success": true,
+  "projectFilePath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\QuizGenerator.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jakub\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
+    "C:\\Users\\jakub\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
