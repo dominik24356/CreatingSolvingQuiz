@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using QuizGenerator.Core.ViewModels.Pages;
 
 namespace QuizGenerator
 {
@@ -23,6 +24,8 @@ namespace QuizGenerator
         public QuizGenFormPage()
         {
             InitializeComponent();
+            DataContext = new QuizGenFormPageViewModel();  // tutaj podpięty jest viewmodel pod naszą stronę
+
         }
     }
 }

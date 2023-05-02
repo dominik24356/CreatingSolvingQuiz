@@ -21,10 +21,10 @@
                        FontSize="40"  HorizontalAlignment="Center"/>
 
                 <ScrollViewer Height="100" Margin="0 10">
-                    <ItemsControl ItemsSource="{Binding QuestionsList}" Margin="10">
+                    <ItemsControl ItemsSource="{Binding QuizzesList}" Margin="10">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <local:Question/>
+                                <local:Quiz/>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
@@ -38,9 +38,9 @@
                     </Grid.ColumnDefinitions>
 
 
-                    <Button Command="{Binding AddNewQuestionCommand}" 
+                    <Button Command="{Binding DeleteQuizCommand}" 
                         Content="Usuń zaznaczony" FontSize="18"></Button>
-                    <Button Command ="{Binding DeleteQuestionCommand}" 
+                    <Button Command ="{Binding EditQuizCommand}" 
                         Grid.Column="1"   
                         Content="Edytuj zaznaczony" FontSize="18"></Button>
                 </Grid>
@@ -71,20 +71,20 @@
                 <TextBox Text="{Binding QuestionText, Mode=TwoWay}"/>
 
                 <TextBlock Text="Odpowiedź a: "  FontSize="15"/>
-                <TextBox Text="{Binding NewWorkTaskTitle, Mode=TwoWay}"/>
+                <TextBox Text="{Binding AnswerA, Mode=TwoWay}"/>
 
                 <TextBlock Text="Odpowiedź b: "  FontSize="15"/>
-                <TextBox Text="{Binding NewWorkTaskTitle, Mode=TwoWay}"/>
+                <TextBox Text="{Binding AnswerB, Mode=TwoWay}"/>
 
                 <TextBlock Text="Odpowiedź c: "  FontSize="15"/>
-                <TextBox Text="{Binding NewWorkTaskTitle, Mode=TwoWay}"/>
+                <TextBox Text="{Binding AnswerC, Mode=TwoWay}"/>
 
                 <TextBlock Text="Odpowiedź d: " FontSize="15" />
-                <TextBox Text="{Binding NewWorkTaskTitle, Mode=TwoWay}"/>
+                <TextBox Text="{Binding AnswerD, Mode=TwoWay}"/>
 
                 <TextBlock Text="Prawidłowa odpowiedź: " FontSize="15" />
 
-                <ComboBox SelectedIndex="0" SelectedItem="{Binding SelectedAnswer, Mode=TwoWay}">
+                <ComboBox SelectedIndex="0" SelectedItem="{Binding ProperAnswer, Mode=TwoWay}">
                     <ComboBox.ItemsSource>
                         <x:Array Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                             <sys:String>a</sys:String>
@@ -113,7 +113,7 @@
                     <Button Command ="{Binding EditQuestionCommand}" 
                         Grid.Column="2"   
                         Content="Edytuj zaznaczone" FontSize="18"></Button>
-                    <Button Command ="{Binding SaveQuizCommand}" 
+                    <Button Command ="{Binding AddNewQuizCommand}" 
                         Grid.Column="3"   
                         Content="Zapisz Quiz" FontSize="18"></Button>
                 </Grid>

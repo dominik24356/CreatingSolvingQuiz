@@ -53,7 +53,7 @@ namespace ToDoList {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ToDoList;component/controls/worktask.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ToDoList;V1.0.0.0;component/controls/worktask.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Controls\WorkTask.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
