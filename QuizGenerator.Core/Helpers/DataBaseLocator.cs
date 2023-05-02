@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuizGenerator.Database;
+﻿using QuizGenerator.Database;
 
-namespace QuizGenerator.Core.Helpers
+namespace QuizGenerator.Core
 {
-    class DataBaseLocator
+    public class DataBaseLocator
     {
 
         public static QuizGeneratorDbContext Database { get; set; }

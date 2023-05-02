@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using QuizGenerator.Core;
+using QuizGenerator.Database;
 
 namespace QuizGenerator
 {
@@ -13,5 +15,19 @@ namespace QuizGenerator
     /// </summary>
     public partial class App : Application
     {
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            var database = new QuizGeneratorDbContext();
+
+            database.Database.EnsureCreated();
+
+            DataBaseLocator.Database = database;
+
+        }
+
+
     }
 }

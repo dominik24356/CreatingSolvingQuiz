@@ -8,6 +8,7 @@ using System.Windows.Input;
 using QuizGenerator.Core.Helpers;
 using QuizGenerator.Core.ViewModels.Base;
 using QuizGenerator.Core.ViewModels.Controls;
+using QuizGenerator.Database.Entities;
 
 namespace QuizGenerator.Core.ViewModels.Pages
 {
@@ -47,18 +48,26 @@ namespace QuizGenerator.Core.ViewModels.Pages
             };
             QuestionsList.Add(newQuestion);
 
-            //DatabaseLocator.Database.WorkTasks.Add(new WorkTask
-            //{
-            //    Id = newTask.Id,
-            //    Title = newTask.Title,
-            //    Description = newTask.Description,
-            //    CreatedDate = newTask.CreatedDate
-            //});
+            DataBaseLocator.Database.Questions.Add(new Question
+            {
+                Id = newQuestion.Id,
+                QuestionText = newQuestion.QuestionText,
+                OptionA = newQuestion.OptionA,
+                OptionB = newQuestion.OptionB,
+                OptionC = newQuestion.OptionC,
+                OptionD = newQuestion.OptionD,
+                CorrectOption = newQuestion.CorrectOption
+            });
 
-            //DatabaseLocator.Database.SaveChanges();
+      //      DataBaseLocator.Database.SaveChanges();
 
-            //NewWorkTaskTitle = String.Empty;
-            //NewWorkTaskDescription = String.Empty;
+            QuestionText = String.Empty;
+            AnswerA = String.Empty;
+            AnswerB = String.Empty;
+            AnswerC = String.Empty;
+            AnswerD = String.Empty;
+            
+
         }
 
         private void addNewQuiz()
@@ -70,18 +79,31 @@ namespace QuizGenerator.Core.ViewModels.Pages
             };
             QuizzesList.Add(newQuiz);
 
-            //DatabaseLocator.Database.WorkTasks.Add(new WorkTask
-            //{
-            //    Id = newTask.Id,
-            //    Title = newTask.Title,
-            //    Description = newTask.Description,
-            //    CreatedDate = newTask.CreatedDate
-            //});
+            var QuizEntityQuestions = new List<Question>();
 
-            //DatabaseLocator.Database.SaveChanges();
+            foreach (var question in newQuiz.Questions)
+            {
+                QuizEntityQuestions.Add(new Question // mapowanie, mozna by to wrzcic gdzies do innej klasy
+                {
+                    Id= question.Id,
+                    QuestionText = question.QuestionText,
+                    OptionA = question.OptionA,
+                    OptionB = question.OptionB,
+                    OptionC = question.OptionC,
+                    OptionD = question.OptionD,
+                    CorrectOption = question.CorrectOption
+                });
+            }
 
-            //NewWorkTaskTitle = String.Empty;
-            //NewWorkTaskDescription = String.Empty;
+            DataBaseLocator.Database.Quizzes.Add(new Quiz
+            {
+                Id = newQuiz.Id,
+                Name = newQuiz.QuizTitle,
+                Questions = QuizEntityQuestions
+            });
+
+            DataBaseLocator.Database.SaveChanges();
+
         }
 
 
