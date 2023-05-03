@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using QuizGenerator.Core.Helpers;
 using QuizGenerator.Core.ViewModels.Base;
@@ -28,11 +25,13 @@ namespace QuizGenerator.Core.ViewModels.Pages
 
         public ICommand AddNewQuestionCommand { get; set; }
         public ICommand AddNewQuizCommand { get; set; }
+        //public ICommand SaveQuizCommand { get; set; }
 
         public QuizGenFormPageViewModel()
         {
             AddNewQuestionCommand = new RelayCommand(AddNewQuestion);
-            AddNewQuizCommand = new RelayCommand(addNewQuiz);
+            AddNewQuizCommand = new RelayCommand(AddNewQuiz);
+          //  SaveQuizCommand = new RelayCommand(SaveQuiz);
         }
 
         private void AddNewQuestion()
@@ -48,30 +47,17 @@ namespace QuizGenerator.Core.ViewModels.Pages
             };
             QuestionsList.Add(newQuestion);
 
-            DataBaseLocator.Database.Questions.Add(new Question
-            {
-                Id = newQuestion.Id,
-                QuestionText = newQuestion.QuestionText,
-                OptionA = newQuestion.OptionA,
-                OptionB = newQuestion.OptionB,
-                OptionC = newQuestion.OptionC,
-                OptionD = newQuestion.OptionD,
-                CorrectOption = newQuestion.CorrectOption
-            });
-
-      //      DataBaseLocator.Database.SaveChanges();
-
-            QuestionText = String.Empty;
-            AnswerA = String.Empty;
-            AnswerB = String.Empty;
-            AnswerC = String.Empty;
-            AnswerD = String.Empty;
-            
-
+            QuestionText = string.Empty;
+            AnswerA = string.Empty;
+            AnswerB = string.Empty;
+            AnswerC = string.Empty;
+            AnswerD = string.Empty;
+            ProperAnswer = string.Empty;
         }
 
-        private void addNewQuiz()
+        private void AddNewQuiz()
         {
+
             var newQuiz = new QuizViewModel
             {
                 Questions = QuestionsList.ToList(),
@@ -79,13 +65,29 @@ namespace QuizGenerator.Core.ViewModels.Pages
             };
             QuizzesList.Add(newQuiz);
 
-            var QuizEntityQuestions = new List<Question>();
+            SaveQuiz();
 
-            foreach (var question in newQuiz.Questions)
+            QuizName = string.Empty;
+            QuestionsList.Clear();
+
+           
+
+        }
+
+
+        private void SaveQuiz()
+        {
+            var quizEntity = new Quiz
             {
-                QuizEntityQuestions.Add(new Question // mapowanie, mozna by to wrzcic gdzies do innej klasy
+                Name = QuizzesList.Last().QuizTitle,
+                Questions = new List<Question>()
+           
+            };
+
+            foreach (var question in QuizzesList.Last().Questions)
+            {
+                quizEntity.Questions.Add(new Question
                 {
-                    Id= question.Id,
                     QuestionText = question.QuestionText,
                     OptionA = question.OptionA,
                     OptionB = question.OptionB,
@@ -95,17 +97,21 @@ namespace QuizGenerator.Core.ViewModels.Pages
                 });
             }
 
-            DataBaseLocator.Database.Quizzes.Add(new Quiz
+        
+
+            DataBaseLocator.Database.Quizzes.Add(quizEntity);
+
+
+             foreach (var question in quizEntity.Questions)
             {
-                Id = newQuiz.Id,
-                Name = newQuiz.QuizTitle,
-                Questions = QuizEntityQuestions
-            });
+                question.QuizId = quizEntity.Id;
+            }
 
             DataBaseLocator.Database.SaveChanges();
 
+           
+
+            DataBaseLocator.Database.SaveChanges();
         }
-
-
     }
 }

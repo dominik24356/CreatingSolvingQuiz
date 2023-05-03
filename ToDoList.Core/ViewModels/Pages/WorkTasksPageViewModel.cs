@@ -45,6 +45,7 @@ namespace ToDoList.Core.ViewModels.Pages
 
         private void AddNewTask()
         {
+
             var newTask = new WorkTaskViewModel
             {
                 Title = NewWorkTaskTitle,

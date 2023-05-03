@@ -53,7 +53,7 @@ namespace QuizGenerator {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QuizGenerator;component/controls/question.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QuizGenerator;V1.0.0.0;component/controls/question.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Controls\Question.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
