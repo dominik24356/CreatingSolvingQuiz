@@ -25,13 +25,11 @@ namespace QuizGenerator.Core.ViewModels.Pages
 
         public ICommand AddNewQuestionCommand { get; set; }
         public ICommand AddNewQuizCommand { get; set; }
-        //public ICommand SaveQuizCommand { get; set; }
 
         public QuizGenFormPageViewModel()
         {
             AddNewQuestionCommand = new RelayCommand(AddNewQuestion);
             AddNewQuizCommand = new RelayCommand(AddNewQuiz);
-          //  SaveQuizCommand = new RelayCommand(SaveQuiz);
         }
 
         private void AddNewQuestion()
@@ -69,9 +67,6 @@ namespace QuizGenerator.Core.ViewModels.Pages
 
             QuizName = string.Empty;
             QuestionsList.Clear();
-
-           
-
         }
 
 
@@ -101,17 +96,14 @@ namespace QuizGenerator.Core.ViewModels.Pages
 
             DataBaseLocator.Database.Quizzes.Add(quizEntity);
 
-
-             foreach (var question in quizEntity.Questions)
+            
+            foreach (var question in quizEntity.Questions)
             {
                 question.QuizId = quizEntity.Id;
             }
 
             DataBaseLocator.Database.SaveChanges();
 
-           
-
-            DataBaseLocator.Database.SaveChanges();
         }
     }
 }

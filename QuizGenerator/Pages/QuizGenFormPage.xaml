@@ -21,10 +21,10 @@
                        FontSize="40"  HorizontalAlignment="Center"/>
 
                 <ScrollViewer Height="100" Margin="0 10">
-                    <ItemsControl ItemsSource="{Binding QuizzesList}" Margin="10">
+                    <ItemsControl ItemsSource="{Binding QuizzesList, Mode=TwoWay}" Margin="10">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <local:Quiz/>
+                                <local:Quiz />
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
@@ -58,15 +58,15 @@
                 <TextBox Text="{Binding QuizName, Mode=TwoWay}"/>
                 
                 <ScrollViewer Height="100" Margin="0 10">
-                    <ItemsControl ItemsSource="{Binding QuestionsList}" Margin="10">
+                    <ItemsControl ItemsSource="{Binding QuestionsList, Mode=TwoWay}" Margin="10">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <local:Question/>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
-                </ScrollViewer>
-               
+                </ScrollViewer> 
+                    
                 <TextBlock Text="Treść pytania: "  FontSize="15"/>
                 <TextBox Text="{Binding QuestionText, Mode=TwoWay}"/>
 
