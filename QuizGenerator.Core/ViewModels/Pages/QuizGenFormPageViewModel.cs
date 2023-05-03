@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
@@ -26,16 +27,21 @@ namespace QuizGenerator.Core.ViewModels.Pages
         public ICommand AddNewQuestionCommand { get; set; }
         public ICommand AddNewQuizCommand { get; set; }
         public ICommand DeleteSelectedQuestionsCommand { get; set; }
-
         public ICommand DeleteSelectedQuizCommand { get; set; }
-       
+        public ICommand ConfirmEditQuestionCommand { get; set; }
+        public ICommand FillFormCommand { get; set; }
+        
+
         public QuizGenFormPageViewModel()
         {
             AddNewQuestionCommand = new RelayCommand(AddNewQuestion);
             AddNewQuizCommand = new RelayCommand(AddNewQuiz);
             DeleteSelectedQuestionsCommand = new RelayCommand(deleteSelectedQuestions);
             DeleteSelectedQuizCommand = new RelayCommand(deleteSelectedQuiz);
+            ConfirmEditQuestionCommand = new RelayCommand(editSelectedQuestion);
+            FillFormCommand = new RelayCommand(fillTheFields);
         }
+
 
         private void AddNewQuestion()
         {
@@ -137,7 +143,6 @@ namespace QuizGenerator.Core.ViewModels.Pages
             {
                 QuizzesList.Remove(quiz);
 
-                // Remove all questions associated with the quiz from the database
                 var quizEntity = DataBaseLocator.Database.Quizzes.FirstOrDefault(q => q.Id == quiz.Id);
                 if (quizEntity != null)
                 {
@@ -153,6 +158,45 @@ namespace QuizGenerator.Core.ViewModels.Pages
             DataBaseLocator.Database.SaveChanges();
         }
 
+        private void fillTheFields()
+        {
+            var selectedQuestion = QuestionsList.FirstOrDefault(q => q.IsSelected);
+            if (selectedQuestion != null)
+            {
+                QuestionText = selectedQuestion.QuestionText;
+                AnswerA = selectedQuestion.OptionA;
+                AnswerB = selectedQuestion.OptionB;
+                AnswerC = selectedQuestion.OptionC;
+                AnswerD = selectedQuestion.OptionD;
+                ProperAnswer = selectedQuestion.CorrectOption;
+            }
+        }
+
+
+        private void editSelectedQuestion()
+        {
+            var selectedQuestion = QuestionsList.FirstOrDefault(q => q.IsSelected);
+
+            if (selectedQuestion == null)
+                return;
+
+            // update the selected question view model with new values
+            selectedQuestion.QuestionText = this.QuestionText;
+            selectedQuestion.OptionA = AnswerA;
+            selectedQuestion.OptionB = AnswerB;
+            selectedQuestion.OptionC = AnswerC;
+            selectedQuestion.OptionD = AnswerD;
+            selectedQuestion.CorrectOption = ProperAnswer;       
+   
+
+            // reset the input fields
+            QuestionText = string.Empty;
+            AnswerA = string.Empty;
+            AnswerB = string.Empty;
+            AnswerC = string.Empty;
+            AnswerD = string.Empty;
+            ProperAnswer = string.Empty;
+        }
 
 
     }

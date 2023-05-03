@@ -102,20 +102,24 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
 
                     <Button Command="{Binding AddNewQuestionCommand}" 
-                        Content="Dodaj pytanie" FontSize="18"></Button>
+                        Content="Dodaj pytanie" FontSize="15"></Button>
                     <Button Command ="{Binding DeleteSelectedQuestionsCommand}" 
                         Grid.Column="1"   
-                        Content="Usuń zaznaczone" FontSize="18"></Button>
-                    <Button Command ="{Binding EditQuestionCommand}" 
+                        Content="Usuń zaznaczone" FontSize="15"></Button>
+                    <Button Command ="{Binding FillFormCommand}" 
                         Grid.Column="2"   
-                        Content="Edytuj zaznaczone" FontSize="18"></Button>
+                        Content="Edytuj zaznaczone" FontSize="15"></Button>
                     <Button Command ="{Binding AddNewQuizCommand}" 
                         Grid.Column="3"   
-                        Content="Zapisz Quiz" FontSize="18"></Button>
+                        Content="Zapisz Quiz" FontSize="15"></Button>
+                    <Button Command ="{Binding ConfirmEditQuestionCommand}" 
+                        Grid.Column="4"   
+                        Content="Potwierdź edycję" FontSize="15"></Button>
                 </Grid>
             </StackPanel>
         </Border>
