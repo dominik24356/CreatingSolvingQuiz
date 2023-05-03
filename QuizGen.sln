@@ -3,17 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33328.57
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList", "ToDoList\ToDoList.csproj", "{09E7F424-99D3-45A5-8329-A5B7E2AF0FD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizGenerator", "QuizGenerator\QuizGenerator.csproj", "{57EAA205-3D02-4898-9D3B-134FFB1FB2D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.Core", "ToDoList.Core\ToDoList.Core.csproj", "{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizGenerator.Core", "QuizGenerator.Core\QuizGenerator.Core.csproj", "{60408813-06CD-4C60-A20A-79BC95AAFE99}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.Database", "ToDoList.Database\ToDoList.Database.csproj", "{62E9105C-8B9E-4D05-80AD-F9728C91D33D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizGenerator", "QuizGenerator\QuizGenerator.csproj", "{57EAA205-3D02-4898-9D3B-134FFB1FB2D1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizGenerator.Core", "QuizGenerator.Core\QuizGenerator.Core.csproj", "{60408813-06CD-4C60-A20A-79BC95AAFE99}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizGenerator.Database", "QuizGenerator.Database\QuizGenerator.Database.csproj", "{764690A7-8ACF-4617-B2DB-F2DC176590DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizGenerator.Database", "QuizGenerator.Database\QuizGenerator.Database.csproj", "{764690A7-8ACF-4617-B2DB-F2DC176590DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{09E7F424-99D3-45A5-8329-A5B7E2AF0FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09E7F424-99D3-45A5-8329-A5B7E2AF0FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09E7F424-99D3-45A5-8329-A5B7E2AF0FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09E7F424-99D3-45A5-8329-A5B7E2AF0FD4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4A66395-5208-4375-8CD2-2D54D5A8F9AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62E9105C-8B9E-4D05-80AD-F9728C91D33D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62E9105C-8B9E-4D05-80AD-F9728C91D33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62E9105C-8B9E-4D05-80AD-F9728C91D33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62E9105C-8B9E-4D05-80AD-F9728C91D33D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57EAA205-3D02-4898-9D3B-134FFB1FB2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57EAA205-3D02-4898-9D3B-134FFB1FB2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57EAA205-3D02-4898-9D3B-134FFB1FB2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
