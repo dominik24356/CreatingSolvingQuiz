@@ -15,7 +15,6 @@ namespace QuizGenerator.Core.ViewModels.Pages
         public ObservableCollection<QuizViewModel> QuizzesList { get; set; } = new ObservableCollection<QuizViewModel>();
 
         public ObservableCollection<QuestionViewModel> QuestionsList { get; set; } = new ObservableCollection<QuestionViewModel>();
-
         public string QuizName { get; set; }
         public string QuestionText { get; set; }
         public string AnswerA { get; set; }
@@ -23,14 +22,15 @@ namespace QuizGenerator.Core.ViewModels.Pages
         public string AnswerC { get; set; }
         public string AnswerD { get; set; }
         public string ProperAnswer { get; set; }
-
         public ICommand AddNewQuestionCommand { get; set; }
         public ICommand AddNewQuizCommand { get; set; }
         public ICommand DeleteSelectedQuestionsCommand { get; set; }
         public ICommand DeleteSelectedQuizCommand { get; set; }
         public ICommand ConfirmEditQuestionCommand { get; set; }
-        public ICommand FillFormCommand { get; set; }
-        
+        public ICommand FillFormQuestionCommand { get; set; }
+        public ICommand FillFormQuizCommand { get; set; }
+        public ICommand ConfirmEditQuizCommand { get; set; }
+
 
         public QuizGenFormPageViewModel()
         {
@@ -39,7 +39,9 @@ namespace QuizGenerator.Core.ViewModels.Pages
             DeleteSelectedQuestionsCommand = new RelayCommand(deleteSelectedQuestions);
             DeleteSelectedQuizCommand = new RelayCommand(deleteSelectedQuiz);
             ConfirmEditQuestionCommand = new RelayCommand(editSelectedQuestion);
-            FillFormCommand = new RelayCommand(fillTheFields);
+            FillFormQuestionCommand = new RelayCommand(fillTheFieldsFromQuestion);
+            FillFormQuizCommand = new RelayCommand(fillTheFieldsFromQuiz);
+            ConfirmEditQuizCommand = new RelayCommand(EditSelectedQuiz);
         }
 
 
@@ -158,7 +160,7 @@ namespace QuizGenerator.Core.ViewModels.Pages
             DataBaseLocator.Database.SaveChanges();
         }
 
-        private void fillTheFields()
+        private void fillTheFieldsFromQuestion()
         {
             var selectedQuestion = QuestionsList.FirstOrDefault(q => q.IsSelected);
             if (selectedQuestion != null)
@@ -196,6 +198,70 @@ namespace QuizGenerator.Core.ViewModels.Pages
             AnswerC = string.Empty;
             AnswerD = string.Empty;
             ProperAnswer = string.Empty;
+        }
+
+        private void fillTheFieldsFromQuiz()
+        {
+            var selectedQuiz = QuizzesList.FirstOrDefault(q => q.IsSelected);
+            if (selectedQuiz == null)
+                return;
+
+            QuestionsList.Clear();
+
+            foreach (var question in selectedQuiz.Questions)
+            {
+                var questionViewModel = new QuestionViewModel
+                {
+                    QuestionText = question.QuestionText,
+                    OptionA = question.OptionA,
+                    OptionB = question.OptionB,
+                    OptionC = question.OptionC,
+                    OptionD = question.OptionD,
+                    CorrectOption = question.CorrectOption
+                };
+
+                QuestionsList.Add(questionViewModel);
+            }
+
+            // Set quiz name in the input field
+            QuizName = selectedQuiz.QuizTitle;
+        }
+
+
+
+        private void EditSelectedQuiz()
+        {
+            // Find the selected quiz in the QuizzesList
+            var selectedQuiz = QuizzesList.FirstOrDefault(q => q.IsSelected);
+            if (selectedQuiz == null) return;
+
+            // Update the selected quiz with the values from the form
+            selectedQuiz.QuizTitle = QuizName;
+            selectedQuiz.Questions = QuestionsList.ToList();
+
+            // Update the corresponding quiz in the database
+            var quizEntity = DataBaseLocator.Database.Quizzes.Find(selectedQuiz.Id);
+            if (quizEntity == null) return;
+
+            quizEntity.Name = QuizName;
+            quizEntity.Questions.Clear();
+            foreach (var question in QuestionsList)
+            {
+                quizEntity.Questions.Add(new Question
+                {
+                    QuestionText = question.QuestionText,
+                    OptionA = question.OptionA,
+                    OptionB = question.OptionB,
+                    OptionC = question.OptionC,
+                    OptionD = question.OptionD,
+                    CorrectOption = question.CorrectOption
+                });
+            }
+            DataBaseLocator.Database.SaveChanges();
+
+            // Clear the form
+            QuizName = string.Empty;
+            QuestionsList.Clear();
         }
 
 

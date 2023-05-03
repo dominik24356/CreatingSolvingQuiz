@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:QuizGenerator"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="1200"
       Title="QuizGenFormPage">
 
     <Grid>
@@ -35,14 +35,18 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
 
                     <Button Command="{Binding DeleteSelectedQuizCommand}" 
-                        Content="Usuń zaznaczony" FontSize="18"></Button>
-                    <Button Command ="{Binding EditQuizCommand}" 
+                        Content="Usuń zaznaczony" FontSize="15"></Button>
+                    <Button Command ="{Binding FillFormQuizCommand}" 
                         Grid.Column="1"   
-                        Content="Edytuj zaznaczony" FontSize="18"></Button>
+                        Content="Edytuj zaznaczony" FontSize="15"></Button>
+                    <Button Command ="{Binding ConfirmEditQuizCommand}" 
+                        Grid.Column="2"   
+                        Content="Potwierdź edycję" FontSize="15"></Button>
                 </Grid>
 
             </StackPanel>
@@ -111,7 +115,7 @@
                     <Button Command ="{Binding DeleteSelectedQuestionsCommand}" 
                         Grid.Column="1"   
                         Content="Usuń zaznaczone" FontSize="15"></Button>
-                    <Button Command ="{Binding FillFormCommand}" 
+                    <Button Command ="{Binding FillFormQuestionCommand}" 
                         Grid.Column="2"   
                         Content="Edytuj zaznaczone" FontSize="15"></Button>
                     <Button Command ="{Binding AddNewQuizCommand}" 
