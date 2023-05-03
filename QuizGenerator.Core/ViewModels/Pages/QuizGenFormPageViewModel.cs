@@ -25,11 +25,16 @@ namespace QuizGenerator.Core.ViewModels.Pages
 
         public ICommand AddNewQuestionCommand { get; set; }
         public ICommand AddNewQuizCommand { get; set; }
+        public ICommand DeleteSelectedQuestionsCommand { get; set; }
 
+        public ICommand DeleteSelectedQuizCommand { get; set; }
+       
         public QuizGenFormPageViewModel()
         {
             AddNewQuestionCommand = new RelayCommand(AddNewQuestion);
             AddNewQuizCommand = new RelayCommand(AddNewQuiz);
+            DeleteSelectedQuestionsCommand = new RelayCommand(deleteSelectedQuestions);
+            DeleteSelectedQuizCommand = new RelayCommand(deleteSelectedQuiz);
         }
 
         private void AddNewQuestion()
@@ -60,26 +65,30 @@ namespace QuizGenerator.Core.ViewModels.Pages
             {
                 Questions = QuestionsList.ToList(),
                 QuizTitle = QuizName
-            };
-            QuizzesList.Add(newQuiz);
+            };      
 
-            SaveQuiz();
+            Quiz savedQuiz = SaveQuiz();
+
+            newQuiz.Id = savedQuiz.Id;
+
+            QuizzesList.Add(newQuiz);
 
             QuizName = string.Empty;
             QuestionsList.Clear();
         }
 
 
-        private void SaveQuiz()
+        private Quiz SaveQuiz()
         {
             var quizEntity = new Quiz
             {
-                Name = QuizzesList.Last().QuizTitle,
+                //Name = QuizzesList.Last().QuizTitle,
+                Name = QuizName,
                 Questions = new List<Question>()
            
             };
 
-            foreach (var question in QuizzesList.Last().Questions)
+            foreach (var question in QuestionsList)
             {
                 quizEntity.Questions.Add(new Question
                 {
@@ -95,15 +104,56 @@ namespace QuizGenerator.Core.ViewModels.Pages
         
 
             DataBaseLocator.Database.Quizzes.Add(quizEntity);
-
-            
-            foreach (var question in quizEntity.Questions)
-            {
-                question.QuizId = quizEntity.Id;
-            }
-
             DataBaseLocator.Database.SaveChanges();
 
+
+            return quizEntity;
+
         }
+
+        private void deleteSelectedQuestions()
+        {
+            var selectedQuestions = QuestionsList.Where(q => q.IsSelected).ToList();
+
+            foreach (var question in selectedQuestions)
+            {
+                QuestionsList.Remove(question);
+
+                // Remove question from the database
+                var questionEntity = DataBaseLocator.Database.Questions.FirstOrDefault(q => q.Id == question.Id);
+                if (questionEntity != null)
+                {
+                    DataBaseLocator.Database.Questions.Remove(questionEntity);
+                }
+            }
+            DataBaseLocator.Database.SaveChanges();
+        }
+
+        private void deleteSelectedQuiz()
+        {
+            var selectedQuizzes = QuizzesList.Where(q => q.IsSelected).ToList();
+
+            foreach (var quiz in selectedQuizzes)
+            {
+                QuizzesList.Remove(quiz);
+
+                // Remove all questions associated with the quiz from the database
+                var quizEntity = DataBaseLocator.Database.Quizzes.FirstOrDefault(q => q.Id == quiz.Id);
+                if (quizEntity != null)
+                {
+                    foreach (var question in quizEntity.Questions.ToList())
+                    {
+                        quizEntity.Questions.Remove(question);
+                        DataBaseLocator.Database.Questions.Remove(question);
+                    }
+
+                    DataBaseLocator.Database.Quizzes.Remove(quizEntity);
+                }
+            }
+            DataBaseLocator.Database.SaveChanges();
+        }
+
+
+
     }
 }

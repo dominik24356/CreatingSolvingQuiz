@@ -38,7 +38,7 @@
                     </Grid.ColumnDefinitions>
 
 
-                    <Button Command="{Binding DeleteQuizCommand}" 
+                    <Button Command="{Binding DeleteSelectedQuizCommand}" 
                         Content="Usuń zaznaczony" FontSize="18"></Button>
                     <Button Command ="{Binding EditQuizCommand}" 
                         Grid.Column="1"   
@@ -107,7 +107,7 @@
 
                     <Button Command="{Binding AddNewQuestionCommand}" 
                         Content="Dodaj pytanie" FontSize="18"></Button>
-                    <Button Command ="{Binding DeleteQuestionCommand}" 
+                    <Button Command ="{Binding DeleteSelectedQuestionsCommand}" 
                         Grid.Column="1"   
                         Content="Usuń zaznaczone" FontSize="18"></Button>
                     <Button Command ="{Binding EditQuestionCommand}" 
