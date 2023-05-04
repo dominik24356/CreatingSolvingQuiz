@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator\\QuizGenerator.csproj": {}
+    "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator\\QuizGenerator.csproj": {}
   },
   "projects": {
-    "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\QuizGenerator.Core.csproj": {
+    "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Core\\QuizGenerator.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\QuizGenerator.Core.csproj",
+        "projectUniqueName": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Core\\QuizGenerator.Core.csproj",
         "projectName": "QuizGenerator.Core",
-        "projectPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\QuizGenerator.Core.csproj",
-        "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-        "outputPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\obj\\",
+        "projectPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Core\\QuizGenerator.Core.csproj",
+        "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+        "outputPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jakub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Database\\QuizGenerator.Database.csproj": {
-                "projectPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Database\\QuizGenerator.Database.csproj"
+              "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Database\\QuizGenerator.Database.csproj": {
+                "projectPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Database\\QuizGenerator.Database.csproj"
               }
             }
           }
@@ -64,21 +64,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.113\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Database\\QuizGenerator.Database.csproj": {
+    "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Database\\QuizGenerator.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Database\\QuizGenerator.Database.csproj",
+        "projectUniqueName": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Database\\QuizGenerator.Database.csproj",
         "projectName": "QuizGenerator.Database",
-        "projectPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Database\\QuizGenerator.Database.csproj",
-        "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-        "outputPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Database\\obj\\",
+        "projectPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Database\\QuizGenerator.Database.csproj",
+        "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+        "outputPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jakub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,21 +128,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.113\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator\\QuizGenerator.csproj": {
+    "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator\\QuizGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator\\QuizGenerator.csproj",
+        "projectUniqueName": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator\\QuizGenerator.csproj",
         "projectName": "QuizGenerator",
-        "projectPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator\\QuizGenerator.csproj",
-        "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-        "outputPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator\\obj\\",
+        "projectPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator\\QuizGenerator.csproj",
+        "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+        "outputPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jakub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,8 +156,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\QuizGenerator.Core.csproj": {
-                "projectPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\QuizGenerator.Core.csproj"
+              "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Core\\QuizGenerator.Core.csproj": {
+                "projectPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Core\\QuizGenerator.Core.csproj"
               }
             }
           }
@@ -189,7 +189,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.113\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

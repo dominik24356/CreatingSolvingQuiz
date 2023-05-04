@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Module Quiz Gen\QuizGen\QuizGenerator\obj\Debug\net5.0-windows\
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator\obj\Debug\net5.0-windows\
 QuizGenerator
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\Module Quiz Gen\QuizGen\QuizGenerator\App.xaml
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator\App.xaml
 4212565432
 
 6-1280397897
-2191461744997
+2191256538431
 Controls\Question.xaml;Controls\Quiz.xaml;MainWindow.xaml;Pages\QuizGenFormPage.xaml;
 
 False

@@ -1219,19 +1219,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jakub\\.nuget\\packages\\": {}
+    "C:\\Users\\domin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\QuizGenerator.Core.csproj",
+      "projectUniqueName": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Core\\QuizGenerator.Core.csproj",
       "projectName": "QuizGenerator.Core",
-      "projectPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\QuizGenerator.Core.csproj",
-      "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-      "outputPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Core\\obj\\",
+      "projectPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Core\\QuizGenerator.Core.csproj",
+      "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+      "outputPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jakub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1245,8 +1245,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Database\\QuizGenerator.Database.csproj": {
-              "projectPath": "D:\\Module Quiz Gen\\QuizGen\\QuizGenerator.Database\\QuizGenerator.Database.csproj"
+            "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Database\\QuizGenerator.Database.csproj": {
+              "projectPath": "D:\\Projekty C#\\GeneratorQuizProjekt\\QuizGenerator.Database\\QuizGenerator.Database.csproj"
             }
           }
         }
@@ -1281,7 +1281,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.113\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
