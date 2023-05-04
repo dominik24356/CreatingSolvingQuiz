@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
+using Microsoft.EntityFrameworkCore;
 using QuizGenerator.Core.Helpers;
 using QuizGenerator.Core.ViewModels.Base;
 using QuizGenerator.Core.ViewModels.Controls;
@@ -42,7 +43,23 @@ namespace QuizGenerator.Core.ViewModels.Pages
             FillFormQuestionCommand = new RelayCommand(fillTheFieldsFromQuestion);
             FillFormQuizCommand = new RelayCommand(fillTheFieldsFromQuiz);
             ConfirmEditQuizCommand = new RelayCommand(EditSelectedQuiz);
+
+
+            //odczyt quizow z pytaniami
+            foreach(var quiz in DataBaseLocator.Database.Quizzes.Include(q => q.Questions).ToList())
+            {
+                QuizzesList.Add(new QuizViewModel
+                {
+                    Id = quiz.Id,
+                    QuizTitle = AesEncryptionHelper.DecryptString(quiz.Name),  
+                    Questions = QuestionViewModelMapper.mapToViewModelList(quiz.Questions)
+                }
+                    );
+            }
+
         }
+
+        
 
 
         private void AddNewQuestion()
@@ -90,34 +107,30 @@ namespace QuizGenerator.Core.ViewModels.Pages
         {
             var quizEntity = new Quiz
             {
-                //Name = QuizzesList.Last().QuizTitle,
-                Name = QuizName,
+                Name = AesEncryptionHelper.EncryptString(QuizName),
                 Questions = new List<Question>()
-           
             };
 
             foreach (var question in QuestionsList)
             {
                 quizEntity.Questions.Add(new Question
                 {
-                    QuestionText = question.QuestionText,
-                    OptionA = question.OptionA,
-                    OptionB = question.OptionB,
-                    OptionC = question.OptionC,
-                    OptionD = question.OptionD,
-                    CorrectOption = question.CorrectOption
+                    QuestionText = AesEncryptionHelper.EncryptString(question.QuestionText),
+                    OptionA = AesEncryptionHelper.EncryptString(question.OptionA),
+                    OptionB = AesEncryptionHelper.EncryptString(question.OptionB),
+                    OptionC = AesEncryptionHelper.EncryptString(question.OptionC),
+                    OptionD = AesEncryptionHelper.EncryptString(question.OptionD),
+                    CorrectOption = AesEncryptionHelper.EncryptString(question.CorrectOption)
                 });
             }
 
-        
 
             DataBaseLocator.Database.Quizzes.Add(quizEntity);
             DataBaseLocator.Database.SaveChanges();
 
-
             return quizEntity;
-
         }
+
 
         private void deleteSelectedQuestions()
         {
@@ -243,20 +256,22 @@ namespace QuizGenerator.Core.ViewModels.Pages
             var quizEntity = DataBaseLocator.Database.Quizzes.Find(selectedQuiz.Id);
             if (quizEntity == null) return;
 
-            quizEntity.Name = QuizName;
+            quizEntity.Name = AesEncryptionHelper.EncryptString(QuizName);
             quizEntity.Questions.Clear();
+
             foreach (var question in QuestionsList)
             {
                 quizEntity.Questions.Add(new Question
                 {
-                    QuestionText = question.QuestionText,
-                    OptionA = question.OptionA,
-                    OptionB = question.OptionB,
-                    OptionC = question.OptionC,
-                    OptionD = question.OptionD,
-                    CorrectOption = question.CorrectOption
+                    QuestionText = AesEncryptionHelper.EncryptString(question.QuestionText),
+                    OptionA = AesEncryptionHelper.EncryptString(question.OptionA),
+                    OptionB = AesEncryptionHelper.EncryptString(question.OptionB),
+                    OptionC = AesEncryptionHelper.EncryptString(question.OptionC),
+                    OptionD = AesEncryptionHelper.EncryptString(question.OptionD),
+                    CorrectOption = AesEncryptionHelper.EncryptString(question.CorrectOption)
                 });
             }
+
             DataBaseLocator.Database.SaveChanges();
 
             // Clear the form

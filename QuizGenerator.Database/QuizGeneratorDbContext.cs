@@ -26,6 +26,13 @@ namespace QuizGenerator.Database
                 .HasOne(q => q.Quiz)
                 .WithMany(qz => qz.Questions)
                 .HasForeignKey(q => q.QuizId);
+
+            modelBuilder.Entity<Quiz>()
+    .HasMany(qz => qz.Questions)
+    .WithOne(q => q.Quiz)
+    .HasForeignKey(q => q.QuizId);
+
+
         }
 
 
