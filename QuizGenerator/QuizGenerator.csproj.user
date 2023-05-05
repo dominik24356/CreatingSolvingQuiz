@@ -13,7 +13,13 @@
     <Compile Update="Controls\Quiz.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\MenuPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\QuizGenFormPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\SolvingQuizPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -27,7 +33,13 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\MenuPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\QuizGenFormPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SolvingQuizPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

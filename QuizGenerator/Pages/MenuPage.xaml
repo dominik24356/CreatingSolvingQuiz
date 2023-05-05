@@ -1,0 +1,17 @@
+﻿<Page x:Class="QuizGenerator.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:QuizGenerator"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="400"
+      Title="MenuPage">
+    <Grid >
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Command="{Binding startGeneratingCommand}">Uruchom Generator Quizów</Button>
+            <Button Command="{Binding startSolvingCommand}">Uruchom Rozwiązywanie Quizów</Button>
+        </StackPanel>
+        
+    </Grid>
+</Page>
