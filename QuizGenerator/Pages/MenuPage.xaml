@@ -7,11 +7,11 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="400"
       Title="MenuPage">
-    <Grid >
+    
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Command="{Binding startGeneratingCommand}">Uruchom Generator Quizów</Button>
             <Button Command="{Binding startSolvingCommand}">Uruchom Rozwiązywanie Quizów</Button>
         </StackPanel>
         
-    </Grid>
+    
 </Page>

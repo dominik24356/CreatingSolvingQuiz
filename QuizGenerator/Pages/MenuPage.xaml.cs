@@ -1,4 +1,4 @@
-﻿using QuizGenerator.Core.ViewModels.Pages;
+﻿using QuizGenerator.Core.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +25,7 @@ namespace QuizGenerator
         {
             InitializeComponent();
 
-            DataContext = new MenuPageViewModel();
+            
         }
     }
 }

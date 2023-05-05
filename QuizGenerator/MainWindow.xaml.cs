@@ -22,6 +22,7 @@ namespace QuizGenerator
     {
         public MainWindow()
         {
+            
             InitializeComponent();
         }
     }
