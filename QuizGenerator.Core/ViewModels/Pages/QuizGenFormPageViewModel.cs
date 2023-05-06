@@ -5,11 +5,12 @@ using System.Linq;
 using System.Windows.Input;
 using Microsoft.EntityFrameworkCore;
 using QuizGenerator.Core.Helpers;
+using QuizGenerator.Core.Helpers.Commands;
 using QuizGenerator.Core.ViewModels.Base;
 using QuizGenerator.Core.ViewModels.Controls;
 using QuizGenerator.Database.Entities;
 
-namespace QuizGenerator.Core.ViewModels.Pages
+namespace QuizGenerator.Core.ViewModels
 {
     public class QuizGenFormPageViewModel : BaseViewModel
     {
@@ -54,7 +55,7 @@ namespace QuizGenerator.Core.ViewModels.Pages
                     QuizTitle = AesEncryptionHelper.DecryptString(quiz.Name),  
                     Questions = QuestionViewModelMapper.mapToViewModelList(quiz.Questions)
                 }
-                    );
+                );
             }
 
         }

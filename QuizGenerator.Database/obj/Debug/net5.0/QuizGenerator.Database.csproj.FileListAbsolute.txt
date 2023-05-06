@@ -1,12 +1,12 @@
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\bin\Debug\net5.0\QuizGenerator.Database.deps.json
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\bin\Debug\net5.0\QuizGenerator.Database.dll
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\bin\Debug\net5.0\ref\QuizGenerator.Database.dll
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\bin\Debug\net5.0\QuizGenerator.Database.pdb
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.csproj.AssemblyReference.cache
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.GeneratedMSBuildEditorConfig.editorconfig
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.AssemblyInfoInputs.cache
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.AssemblyInfo.cs
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.csproj.CoreCompileInputs.cache
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.dll
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\obj\Debug\net5.0\ref\QuizGenerator.Database.dll
-D:\Module Quiz Gen\QuizGen\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.pdb
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\bin\Debug\net5.0\QuizGenerator.Database.deps.json
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\bin\Debug\net5.0\QuizGenerator.Database.dll
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\bin\Debug\net5.0\QuizGenerator.Database.pdb
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.csproj.AssemblyReference.cache
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.AssemblyInfoInputs.cache
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.AssemblyInfo.cs
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.csproj.CoreCompileInputs.cache
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.dll
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\obj\Debug\net5.0\refint\QuizGenerator.Database.dll
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\obj\Debug\net5.0\QuizGenerator.Database.pdb
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator.Database\obj\Debug\net5.0\ref\QuizGenerator.Database.dll

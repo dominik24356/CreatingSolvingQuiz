@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuizGenerator.Core.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,5 +17,6 @@ namespace QuizGenerator.Core.ViewModels.Base
             PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
 
+        
     }
 }

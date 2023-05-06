@@ -9,13 +9,13 @@
         <StackPanel Orientation="Horizontal">
 
             <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}"/>
-          
-                <TextBlock>
+
+            <TextBlock>
             Nazwa quizu:
             <Run Text="{Binding QuizTitle, Mode=TwoWay}" />
-                </TextBlock>
+            </TextBlock>
 
-            
+
 
         </StackPanel>
     </Grid>
