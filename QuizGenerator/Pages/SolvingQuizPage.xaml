@@ -7,5 +7,74 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SolvingQuizPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
 
+        <!-- Menu -->
+
+        <Grid Grid.Column="0" Background="LightGray">
+            
+            <StackPanel>
+                <TextBlock Text="Lista Quizów" 
+                       FontSize="20"  HorizontalAlignment="Center"/>
+                <ScrollViewer Margin="0 10">
+                    <ItemsControl ItemsSource="{Binding QuizzesList, Mode=TwoWay}" Margin="10">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <local:Quiz />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+                <Button Command="{Binding ChooseQuizToSolveCommand}">Wybierz quiz</Button>
+            </StackPanel>
+
+
+
+
+
+        </Grid>
+
+        <!-- Quiz -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <TextBlock Text="Rozwiązywanie quiz'u" FontSize="20" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Command="{Binding StartQuizCommand}">Start</Button>
+                    <Button Command="{Binding ResetQuizCommand}">Reset</Button>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock>Wybrany Quiz :</TextBlock>
+                    <TextBlock Text="{Binding QuizName}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Grid Grid.Row="1">
+                <ScrollViewer  Margin="0 10">
+                    <ItemsControl ItemsSource="{Binding QuestionsListToShow, Mode=TwoWay}" Margin="10">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <local:QuestionSolve/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
+
+            <StackPanel Grid.Row="2"  HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" Text="{Binding }">Czas: 21:37</TextBlock>
+                <Button Width="60" Height="30">Zakończ</Button>
+                <TextBlock HorizontalAlignment="Center">Punkty 69/100</TextBlock>
+            </StackPanel>
+        </Grid>
+    </Grid>  
 </Page>

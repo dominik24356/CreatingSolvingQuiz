@@ -24,7 +24,7 @@ namespace QuizGenerator
         public SolvingQuizPage()
         {
             InitializeComponent();
-           
+            DataContext = new SolvingQuizPageViewModel();
         }
     }
 }

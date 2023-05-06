@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator\App.xaml
-6-131627691
+7-762964389
 
-81607673080
+9-107776174
 2191256538431
-Controls\Question.xaml;Controls\Quiz.xaml;MainWindow.xaml;Pages\MenuPage.xaml;Pages\QuizGenFormPage.xaml;Pages\SolvingQuizPage.xaml;
+Controls\Question.xaml;Controls\QuestionSolve.xaml;Controls\Quiz.xaml;MainWindow.xaml;Pages\MenuPage.xaml;Pages\QuizGenFormPage.xaml;Pages\SolvingQuizPage.xaml;
 
 False
 

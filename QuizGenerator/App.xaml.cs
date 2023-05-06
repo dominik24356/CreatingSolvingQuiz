@@ -9,6 +9,7 @@ using QuizGenerator.Core;
 using QuizGenerator.Core.Stores;
 using QuizGenerator.Core.ViewModels;
 using QuizGenerator.Database;
+using System.Threading;
 
 namespace QuizGenerator
 {

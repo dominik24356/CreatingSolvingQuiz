@@ -81,3 +81,5 @@ D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator\obj\Debug\net5.0-windows\refin
 D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.pdb
 D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator\obj\Debug\net5.0-windows\QuizGenerator.genruntimeconfig.cache
 D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator\obj\Debug\net5.0-windows\ref\QuizGenerator.dll
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator\obj\Debug\net5.0-windows\Controls\QuestionSolve.g.cs
+D:\Projekty C#\GeneratorQuizProjekt\QuizGenerator\obj\Debug\net5.0-windows\Controls\QuestionSolve.baml

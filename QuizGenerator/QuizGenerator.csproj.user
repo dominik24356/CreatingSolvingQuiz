@@ -10,6 +10,9 @@
     <Compile Update="Controls\Question.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controls\QuestionSolve.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\Quiz.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,6 +28,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Controls\Question.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\QuestionSolve.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Quiz.xaml">
