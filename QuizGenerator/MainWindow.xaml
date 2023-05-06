@@ -17,5 +17,8 @@
         <DataTemplate DataType="{x:Type viewmodels:QuizGenFormPageViewModel}">
             <local:QuizGenFormPage/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:SolvingQuizPageViewModel}">
+            <local:SolvingQuizPage/>
+        </DataTemplate>
     </Window.Resources>
 </Window>

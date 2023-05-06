@@ -16,14 +16,22 @@ namespace QuizGenerator.Core.ViewModels
     {
         public ICommand startGeneratingCommand { get; set; }
         public ICommand startSolvingCommand { get; set; }
+        public ICommand endProgramCommand { get; set; }
 
         
 
         public MenuPageViewModel(NavigationStore navigationStore) 
         {
-            startGeneratingCommand = new NavigateQuizGenCommand(navigationStore);
-            startSolvingCommand = new NavigateQuizSolvCommand(navigationStore);
+            startGeneratingCommand = new NavigateCommand<QuizGenFormPageViewModel>(navigationStore, () => new QuizGenFormPageViewModel());
+            startSolvingCommand = new NavigateCommand<SolvingQuizPageViewModel>(navigationStore, () => new SolvingQuizPageViewModel());
+
+            endProgramCommand = new RelayCommand(endProgram);
             
+        }
+
+        private void endProgram()
+        {
+            Environment.Exit(0);
         }
 
         
