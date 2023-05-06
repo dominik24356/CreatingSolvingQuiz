@@ -6,6 +6,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
 
+    
 
     <Grid>
         <StackPanel Orientation="Vertical">
@@ -18,17 +19,18 @@
             </TextBlock>
 
             <Label Content="{Binding OptionA}"></Label>
-            <RadioButton GroupName="{Binding QuestionViewModel.Id}" Content="A" Tag="A"></RadioButton>
+            <RadioButton  GroupName="{Binding QuestionViewModel.Id}" IsChecked="{Binding SelectA, Mode=OneWayToSource}" Content="A" Tag="A"></RadioButton>
 
             <Label Content="{Binding OptionB}"></Label>
-            <RadioButton GroupName="{Binding QuestionViewModel.Id}" Content="B" Tag="B"></RadioButton>
+            <RadioButton  GroupName="{Binding QuestionViewModel.Id}" IsChecked="{Binding SelectB, Mode=OneWayToSource}" Content="B" Tag="B"></RadioButton>
 
             <Label Content="{Binding OptionC}"></Label>
-            <RadioButton GroupName="{Binding QuestionViewModel.Id}" Content="C" Tag="C"></RadioButton>
+            <RadioButton  GroupName="{Binding QuestionViewModel.Id}" IsChecked="{Binding SelectC, Mode=OneWayToSource}" Content="C" Tag="C"></RadioButton>
 
             <Label Content="{Binding OptionD}"></Label>
-            <RadioButton GroupName="{Binding QuestionViewModel.Id}" Content="D" Tag="D"></RadioButton>
-
+            <RadioButton  GroupName="{Binding QuestionViewModel.Id}" IsChecked="{Binding SelectD, Mode=OneWayToSource}" Content="D" Tag="D"></RadioButton>
+           
+ 
         </StackPanel>
     </Grid>
 </UserControl>

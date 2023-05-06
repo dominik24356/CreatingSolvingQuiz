@@ -72,8 +72,9 @@
 
             <StackPanel Grid.Row="2"  HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Text="{Binding }">Czas: 21:37</TextBlock>
-                <Button Width="60" Height="30">Zakończ</Button>
-                <TextBlock HorizontalAlignment="Center">Punkty 69/100</TextBlock>
+                <Button Width="60" Height="30" Command="{Binding EndQuizCommand}">Zakończ</Button>
+                <TextBlock>Points: </TextBlock>
+                <TextBlock HorizontalAlignment="Center" Text="{Binding points, Mode=OneWay}"/>
             </StackPanel>
         </Grid>
     </Grid>  
