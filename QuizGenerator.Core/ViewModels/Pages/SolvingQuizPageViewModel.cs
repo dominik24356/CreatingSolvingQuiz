@@ -27,6 +27,9 @@ namespace QuizGenerator.Core.ViewModels
 
         public bool isQuizStarted = false;
 
+        public String isQuizStartedName { get; set; } = "Quiz nie został jeszcze rozpoczęty !";
+
+
 
         public int points { get; set; } = 0;
 
@@ -100,6 +103,7 @@ namespace QuizGenerator.Core.ViewModels
         public void StartQuiz() 
         {
             isQuizStarted = true;
+            setStartStopName(isQuizStarted);
             // kopiowanie wczytanego quizu do quizu pokazywanego
             QuestionsListToShow = new ObservableCollection<QuestionSolvingViewModel>();
             foreach (QuestionSolvingViewModel question in QuestionsList)
@@ -116,6 +120,7 @@ namespace QuizGenerator.Core.ViewModels
             QuestionsList.Clear();
             QuestionsListToShow = null;
             QuizName = "Nie wybrano";
+            setStartStopName(false);
 
         }
 
@@ -126,6 +131,8 @@ namespace QuizGenerator.Core.ViewModels
             {
                 return;
             }
+
+            setStartStopName(false);
 
 
             foreach (var question in QuestionsListToShow)
@@ -138,9 +145,23 @@ namespace QuizGenerator.Core.ViewModels
                 }
             }
 
+
             isQuizStarted = false;
 
 
+        }
+
+
+        public void setStartStopName(bool quizStatus)
+        {
+            if (quizStatus)
+            {
+                isQuizStartedName = "Quiz trwa !";
+            }
+            else
+            {
+                isQuizStartedName = "Quiz nie został jeszcze rozpoczęty !";
+            }
         }
 
 
