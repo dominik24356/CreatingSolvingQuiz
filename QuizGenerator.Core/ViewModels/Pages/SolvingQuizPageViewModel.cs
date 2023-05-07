@@ -27,6 +27,8 @@ namespace QuizGenerator.Core.ViewModels
 
         public bool isQuizStarted = false;
 
+        public bool isLoaded = false;
+
         public String isQuizStartedName { get; set; } = "Quiz nie został jeszcze rozpoczęty !";
 
 
@@ -96,13 +98,20 @@ namespace QuizGenerator.Core.ViewModels
             }
 
                 
-            
+            isLoaded = true;
 
         }
 
         public void StartQuiz() 
         {
-            isQuizStarted = true;
+            if (!isLoaded || isQuizStarted)
+            {
+                return;
+            }
+            else
+            {
+                isQuizStarted = true;
+            }
             setStartStopName(isQuizStarted);
             // kopiowanie wczytanego quizu do quizu pokazywanego
             QuestionsListToShow = new ObservableCollection<QuestionSolvingViewModel>();
@@ -116,6 +125,7 @@ namespace QuizGenerator.Core.ViewModels
         {
             points = 0;
             isQuizStarted = false;
+            isLoaded = false;
             // resetowanie quizu wczytanego i kopiowanego
             QuestionsList.Clear();
             QuestionsListToShow = null;
