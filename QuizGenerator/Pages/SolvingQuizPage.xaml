@@ -53,8 +53,16 @@
                     <Button Command="{Binding ResetQuizCommand}">Reset</Button>
                 </StackPanel>
                 <StackPanel>
-                    <TextBlock>Wybrany Quiz :</TextBlock>
-                    <TextBlock Text="{Binding QuizName}"/>
+                    <TextBlock>
+                        <Run>Wybrany Quiz :</Run>
+                        <Run Text="{Binding QuizName}"/>
+                    </TextBlock>
+                    
+                    <TextBlock>
+                        <Run Text="Status quizu: "/>
+                        <Run Text="{Binding isQuizStartedName}"/>
+                    </TextBlock>
+
                 </StackPanel>
             </StackPanel>
 
