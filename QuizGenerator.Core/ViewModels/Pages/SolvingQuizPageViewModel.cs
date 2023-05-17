@@ -25,8 +25,6 @@ namespace QuizGenerator.Core.ViewModels
 
         public string QuizName { get; set; } = "Nie wybrano";
 
-        public int maxPoints { get; set; }
-
         public QuizState quizStatus = QuizState.QuizNotStarted;
 
         public enum QuizState
@@ -41,6 +39,8 @@ namespace QuizGenerator.Core.ViewModels
         public String isQuizStartedName { get; set; } = "Quiz nie został jeszcze rozpoczęty !";
 
         public int points { get; set; } = 0;
+
+        public int maxPoints { get; set; }
 
         public ICommand ChooseQuizToSolveCommand { get; set; }
 
@@ -80,7 +80,8 @@ namespace QuizGenerator.Core.ViewModels
 
         public void ChooseQuizToSolve()
         {
-            
+            ResetQuiz();
+   
             var selectedQuiz = QuizzesList.FirstOrDefault(q => q.IsSelected);
             if (selectedQuiz == null)
                 return;
@@ -134,7 +135,9 @@ namespace QuizGenerator.Core.ViewModels
         }
 
         public void ResetQuiz()
-        {    
+        {
+            maxPoints = 0;
+
             quizStatus = QuizState.QuizNotStarted;
             setStartStopName(QuizState.QuizNotStarted);
 
@@ -150,16 +153,19 @@ namespace QuizGenerator.Core.ViewModels
         private void EndQuiz()
         {
 
-            if (quizStatus != QuizState.QuizStarted)
+            if (quizStatus != QuizState.QuizStarted || QuestionsListToShow.Any(question => question.SelectedOption == null))
             {
                 return;
             }
 
-            setStartStopName(QuizState.QuizEnded);
+            
 
+
+            setStartStopName(QuizState.QuizEnded);
 
             foreach (var question in QuestionsListToShow)
             {
+
                 if (question.CorrectOption.ToUpper().Equals(question.SelectedOption)){
                     points++;
                 }
