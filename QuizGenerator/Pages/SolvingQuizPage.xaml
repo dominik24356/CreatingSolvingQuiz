@@ -79,10 +79,14 @@
             </Grid>
 
             <StackPanel Grid.Row="2"  HorizontalAlignment="Center">
-                <TextBlock HorizontalAlignment="Center" Text="{Binding }">Czas: 21:37</TextBlock>
+                <TextBlock HorizontalAlignment="Center" Text="{Binding }">Czas: 0:37</TextBlock>
                 <Button Width="60" Height="30" Command="{Binding EndQuizCommand}">Zakończ</Button>
-                <TextBlock>Points: </TextBlock>
-                <TextBlock HorizontalAlignment="Center" Text="{Binding points, Mode=OneWay}"/>
+                <TextBlock>
+                        <Run Text="Points : "/>
+                        <Run Text="{Binding points, Mode=OneWay}"/>
+                        <Run Text=" / "/>
+                        <Run Text="{Binding maxPoints}"/>
+                </TextBlock>
             </StackPanel>
         </Grid>
     </Grid>  

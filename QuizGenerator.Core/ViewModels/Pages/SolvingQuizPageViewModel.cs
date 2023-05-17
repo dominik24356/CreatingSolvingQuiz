@@ -25,13 +25,20 @@ namespace QuizGenerator.Core.ViewModels
 
         public string QuizName { get; set; } = "Nie wybrano";
 
-        public bool isQuizStarted = false;
+        public int maxPoints { get; set; }
+
+        public QuizState quizStatus = QuizState.QuizNotStarted;
+
+        public enum QuizState
+        {
+            QuizNotStarted,
+            QuizStarted ,
+            QuizEnded
+        }
 
         public bool isLoaded = false;
 
         public String isQuizStartedName { get; set; } = "Quiz nie został jeszcze rozpoczęty !";
-
-
 
         public int points { get; set; } = 0;
 
@@ -97,6 +104,7 @@ namespace QuizGenerator.Core.ViewModels
                 QuestionsList.Add(questionViewModel);
             }
 
+            maxPoints = QuestionsList.Count();
                 
             isLoaded = true;
 
@@ -104,15 +112,19 @@ namespace QuizGenerator.Core.ViewModels
 
         public void StartQuiz() 
         {
-            if (!isLoaded || isQuizStarted)
+            points = 0;
+
+
+            if (!isLoaded || quizStatus == QuizState.QuizStarted)
             {
                 return;
             }
             else
             {
-                isQuizStarted = true;
+                quizStatus = QuizState.QuizStarted;
+                setStartStopName(quizStatus);
             }
-            setStartStopName(isQuizStarted);
+ 
             // kopiowanie wczytanego quizu do quizu pokazywanego
             QuestionsListToShow = new ObservableCollection<QuestionSolvingViewModel>();
             foreach (QuestionSolvingViewModel question in QuestionsList)
@@ -122,59 +134,58 @@ namespace QuizGenerator.Core.ViewModels
         }
 
         public void ResetQuiz()
-        {
+        {    
+            quizStatus = QuizState.QuizNotStarted;
+            setStartStopName(QuizState.QuizNotStarted);
+
             points = 0;
-            isQuizStarted = false;
             isLoaded = false;
             // resetowanie quizu wczytanego i kopiowanego
             QuestionsList.Clear();
             QuestionsListToShow = null;
-            QuizName = "Nie wybrano";
-            setStartStopName(false);
 
+            QuizName = "Nie wybrano";
         }
 
         private void EndQuiz()
         {
 
-            if (isQuizStarted == false)
+            if (quizStatus != QuizState.QuizStarted)
             {
                 return;
             }
 
-            setStartStopName(false);
+            setStartStopName(QuizState.QuizEnded);
 
 
             foreach (var question in QuestionsListToShow)
             {
-                
-
-
                 if (question.CorrectOption.ToUpper().Equals(question.SelectedOption)){
                     points++;
                 }
             }
 
-
-            isQuizStarted = false;
-
-
+            quizStatus = QuizState.QuizEnded;
         }
 
 
-        public void setStartStopName(bool quizStatus)
+        public void setStartStopName(QuizState quizStatus)
         {
-            if (quizStatus)
+            if (quizStatus == QuizState.QuizStarted)
             {
                 isQuizStartedName = "Quiz trwa !";
             }
-            else
+            else if(quizStatus == QuizState.QuizNotStarted)
             {
                 isQuizStartedName = "Quiz nie został jeszcze rozpoczęty !";
             }
+            else
+            {
+                isQuizStartedName = "Quiz został zakończony !";
+            }
         }
 
-
+        
 
 
     }
