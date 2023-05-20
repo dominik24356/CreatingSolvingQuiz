@@ -62,6 +62,11 @@
                         <Run Text="Status quizu: "/>
                         <Run Text="{Binding isQuizStartedName}"/>
                     </TextBlock>
+                    <TextBlock>
+                        <Run Text="Czas quizu: "/>
+                        <Run Text="{Binding secondsCount}"/>
+                        <Run Text="sekund"/>
+                    </TextBlock>
 
                 </StackPanel>
             </StackPanel>
@@ -79,7 +84,6 @@
             </Grid>
 
             <StackPanel Grid.Row="2"  HorizontalAlignment="Center">
-                <TextBlock HorizontalAlignment="Center" Text="{Binding }">Czas: 0:37</TextBlock>
                 <Button Width="60" Height="30" Command="{Binding EndQuizCommand}">Zakończ</Button>
                 <TextBlock>
                         <Run Text="Points : "/>

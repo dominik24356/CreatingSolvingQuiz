@@ -6,6 +6,7 @@ using QuizGenerator.Core.ViewModels.Controls;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Timers;
 using System.Windows.Input;
 
 
@@ -42,6 +43,10 @@ namespace QuizGenerator.Core.ViewModels
 
         public int maxPoints { get; set; }
 
+        public Timer timer { get; set; } = new Timer(1000);
+
+        public int secondsCount { get; set; } 
+
         public ICommand ChooseQuizToSolveCommand { get; set; }
 
         public ICommand StartQuizCommand { get; set; }
@@ -59,6 +64,11 @@ namespace QuizGenerator.Core.ViewModels
             StartQuizCommand = new RelayCommand(StartQuiz);
             ResetQuizCommand = new RelayCommand(ResetQuiz);
             EndQuizCommand = new RelayCommand(EndQuiz);
+
+            // ustawienia zegara
+            timer.Elapsed += Timer_Elapsed;
+            timer.AutoReset = true;
+
             
 
 
@@ -76,9 +86,15 @@ namespace QuizGenerator.Core.ViewModels
             }
         }
 
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            secondsCount++;
+
+        }
+
         
 
-        public void ChooseQuizToSolve()
+        private void ChooseQuizToSolve()
         {
             ResetQuiz();
    
@@ -111,10 +127,10 @@ namespace QuizGenerator.Core.ViewModels
 
         }
 
-        public void StartQuiz() 
+        private void StartQuiz() 
         {
-            points = 0;
-
+            
+            
 
             if (!isLoaded || quizStatus == QuizState.QuizStarted)
             {
@@ -122,6 +138,9 @@ namespace QuizGenerator.Core.ViewModels
             }
             else
             {
+                secondsCount = 0;
+                timer.Start();
+                points = 0;
                 quizStatus = QuizState.QuizStarted;
                 setStartStopName(quizStatus);
             }
@@ -134,20 +153,29 @@ namespace QuizGenerator.Core.ViewModels
             }
         }
 
-        public void ResetQuiz()
+        private void ResetQuiz()
         {
+            // reset punktów do zdobycia i zdobytych punktów akutalnie wczytanego testu
             maxPoints = 0;
+            points = 0;
 
+            // reset statusu quizu
             quizStatus = QuizState.QuizNotStarted;
             setStartStopName(QuizState.QuizNotStarted);
 
-            points = 0;
+            // reset statusu zaladowania
             isLoaded = false;
+
             // resetowanie quizu wczytanego i kopiowanego
             QuestionsList.Clear();
             QuestionsListToShow = null;
 
+            // zmiana nazwy na quiz nie wczyano
             QuizName = "Nie wybrano";
+
+            // zresetowanie czasu i zatrzymanie zegara
+            secondsCount = 0;
+            timer.Stop();
         }
 
         private void EndQuiz()
@@ -157,9 +185,6 @@ namespace QuizGenerator.Core.ViewModels
             {
                 return;
             }
-
-            
-
 
             setStartStopName(QuizState.QuizEnded);
 
@@ -171,11 +196,15 @@ namespace QuizGenerator.Core.ViewModels
                 }
             }
 
+            timer.Stop();
+
             quizStatus = QuizState.QuizEnded;
         }
 
 
-        public void setStartStopName(QuizState quizStatus)
+
+
+        private void setStartStopName(QuizState quizStatus)
         {
             if (quizStatus == QuizState.QuizStarted)
             {
@@ -189,6 +218,9 @@ namespace QuizGenerator.Core.ViewModels
             {
                 isQuizStartedName = "Quiz został zakończony !";
             }
+        }
+
+        private void time() { 
         }
 
         
